@@ -1,0 +1,430 @@
+
+
+
+<!-- form -->
+
+
+<div class="card mb-5 col-md-12" >
+    <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse"
+      data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
+      <h3 class="mt-10">Journel Voucher</h3>
+    </div>
+  
+  
+  
+    <div id="kt_account_profile_details" class="collapse show">
+      <form novalidate="" class="form">
+        <div class="card-body border-top " >
+  
+  
+  
+  
+          <div class="row  pt-5 m-0 mb-3 shadow-sm" style="background-color: #E6EBF4;">
+  
+  
+            <div class="col-md-5  m-2">
+  
+  
+              <div class="mt-1">
+  
+  
+  
+  
+                <div class="d-flex flex-column fv-row ">
+  
+                  <label class="d-flex align-items-center fs-5 fw-semibold ">
+                    <span class="required"> Vouher NO</span>
+  
+                 
+                  </label>
+                  <input type="text" class="col-md-6 form-control  form-control-sm  form-control-solid"
+                    placeholder="Voucher NO" name="target_title" style="width: 300px;">
+  
+                </div>
+  
+              </div>
+  
+  
+  
+  
+              <div class="row mt-5">
+  
+                <div class="d-flex flex-column  fv-row ">
+                  <!--begin::Label-->
+                  <label class="d-flex align-items-center fs-5 fw-semibold ">
+                    <span class="required"> Voucher Date</span>
+  
+                  </label>
+                  <!--end::Label-->
+  
+                  <div class="d-flex mt-2">
+                    <input type="date" class=" form-control  form-control-sm   form-control-solid" placeholder="Date"
+                      name="target_title" style="width: 300px;">
+  
+                  </div>
+  
+  
+                </div>
+              </div>
+  
+  
+  
+              <div class="row mt-5">
+                <div class="d-flex flex-column  fv-row ">
+                  <!--begin::Label-->
+                  <label class="d-flex align-items-center fs-5 fw-semibold ">
+                    <span class="required"> Voucher Type</span>
+                  </label>
+  
+  
+                  <div class="d-flex">
+                    <input type="name" class="col-md-6 form-control  form-control-sm   form-control-solid"
+                      placeholder="Enter Target Title" name="target_title" style="width: 300px;">
+  
+  
+  
+  
+                      <div class="d-flex  fv-row ps-1">
+                        <!--begin::Label-->
+                    
+                        <div class="d-flex mt-2">
+                          <input type="checkbox" class="form-check-input  " id="companyCheckbox" name="company" value="dgdsg" />
+        
+                        </div>
+                        <label class="d-flex align-items-center fs-6 fw-semibold ps-1 ">
+                          <span class="required"> Transfer</span>
+        
+        
+                       
+                        </label>
+        
+        
+                      </div>
+  
+                  </div>
+  
+  
+                </div>
+  
+  
+              </div>
+  
+  
+  
+              <div class="row mt-5">
+  
+                <div class="d-flex flex-column col-md-10 fv-row ">
+                  <!--begin::Label-->
+                  <label class="d-flex align-items-center fs-5 fw-semibold ">
+                    <span class="required">Narration</span>
+  
+                  </label>
+                  <!--end::Label-->
+  
+                  <div class="d-flex mt-2">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+  
+  
+                </div>
+              </div>
+  
+  
+  
+  
+  
+  
+            </div>
+  
+  
+            <div class="col-md-5 ps-2 m-2">
+  
+  
+              <div class="mt-1">
+  
+  
+  
+  
+                <div class="d-flex flex-column fv-row ">
+  
+                  <label class="d-flex align-items-center fs-5 fw-semibold ">
+                    <span class="required"> Total Debit</span>
+  
+  
+                
+                  </label>
+                  <input type="number" class="col-md-6 form-control form-control-sm  form-control-solid"
+                    name="target_title" style="width: 300px;">
+  
+                </div>
+  
+              </div>
+  
+  
+  
+  
+              <div class="row mt-5">
+  
+                <div class="d-flex flex-column  fv-row ">
+                  <!--begin::Label-->
+                  <label class="d-flex align-items-center fs-5 fw-semibold ">
+                    <span class="required"> Total Credit</span>
+  
+  
+                  </label>
+                  <!--end::Label-->
+  
+                  <div class="d-flex mt-2">
+                    <input type="number" class=" form-control form-control-sm form-control-solid" name="target_title"
+                      style="width: 300px;">
+  
+                  </div>
+  
+  
+                </div>
+              </div>
+  
+  
+  
+              <div class="row mt-5">
+                <div class="d-flex  fv-row ">
+                  <!--begin::Label-->
+                  <label class="d-flex align-items-center fs-5 fw-semibold ">
+                    <span class="required"> Hold this Voucher</span>
+  
+  
+                 
+                  </label>
+  
+  
+                  <div class="d-flex">
+                    <input type="checkbox" class="form-check-input  " id="companyCheckbox" name="company" value="dgdsg" />
+  
+                  </div>
+  
+  
+                </div>
+  
+  
+              </div>
+  
+  
+  
+              <div class="row mt-5">
+  
+                <div class="mb-5">
+                  <button type="button" class="btn btn-dark btn-sm " [disabled]="isLoading" (click)="saveSettings()">
+                    <ng-container *ngIf="!isLoading"><i class="bi bi-file-post fs-3"></i>UnPost</ng-container>
+                    <ng-container *ngIf="isLoading">
+                      <span clas="indicator-progress" [style.display]="'block'">
+                        Please wait...{{ " " }}
+                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                      </span>
+                    </ng-container>
+                  </button>
+  
+  
+  
+                  <button type="button" class="btn btn-success btn-sm ms-1" [disabled]="isLoading"
+                    (click)="saveSettings()">
+                    <ng-container *ngIf="!isLoading"><i class="bi bi-box-arrow-up-right fs-3"></i>Post</ng-container>
+                    <ng-container *ngIf="isLoading">
+                      <span clas="indicator-progress" [style.display]="'block'">
+                        Please wait...{{ " " }}
+                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                      </span>
+                    </ng-container>
+                  </button>
+                </div>
+              </div>
+  
+  
+  
+  
+  
+  
+            </div>
+  
+  
+          </div>
+  
+  
+  
+          <!-- begin::Body -->
+          <div class="card-body p-5 " >
+            <!-- begin::Table container -->
+            <div class="table-responsive table-bordered table-striped  "
+              style="height: 400px !important;  border: 1px solid #dee2e6;">
+              <!-- begin::Table -->
+              <table class="table  table-bordered  align-middle">
+                <!-- begin::Table head -->
+                <thead>
+                  <tr class="fw-bolder text-muted bg-light">
+                    <th class=""></th>
+                    <th class="min-w-125px">Account Code</th>
+                    <th class="min-w-125px">Account Name</th>
+                    <th class="min-w-200px">Debit</th>
+                    <th class="min-w-150px">Credit</th>
+                    <th class="min-w-150px">Cheque No</th>
+                    <th class="min-w-150px">Remarks</th>
+  
+  
+  
+  
+                  </tr>
+                </thead>
+                <!-- end::Table head -->
+                <!-- begin::Table body -->
+                <tbody>
+                  <tr>
+                    <td>
+                      <span [inlineSVG]="'./assets/media/icons/duotune/general/gen027.svg'"
+                        class="svg-icon svg-icon-3"></span>
+                    </td>
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="#45265" /></td>
+  
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="Shahzaib" /></td>
+  
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="420665652366" /></td>
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="420665652366" /></td>
+  
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="23" /></td>
+  
+  
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="remarks" /></td>
+  
+  
+                  </tr>
+  
+  
+  
+  
+  
+  
+                  <tr>
+                    <td>
+                      <span [inlineSVG]="'./assets/media/icons/duotune/general/gen027.svg'"
+                        class="svg-icon svg-icon-3"></span>
+                    </td>
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="#45265" /></td>
+  
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="Shahzaib" /></td>
+  
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="420665652366" /></td>
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="420665652366" /></td>
+  
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="23" /></td>
+  
+  
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="remarks" /></td>
+  
+  
+                  </tr>
+  
+  
+  
+  
+                  <tr>
+                    <td>
+                      <span [inlineSVG]="'./assets/media/icons/duotune/general/gen027.svg'"
+                        class="svg-icon svg-icon-3"></span>
+                    </td>
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="#45265" /></td>
+  
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="Shahzaib" /></td>
+  
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="420665652366" /></td>
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="420665652366" /></td>
+  
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="23" /></td>
+  
+  
+                    <td><input type="name" class="form-control form-control-sm form-control-solid rounded-0"
+                        placeholder="Company name" name="company" value="remarks" /></td>
+  
+  
+                  </tr>
+  
+  
+                </tbody>
+                <!-- end::Table body -->
+              </table>
+              <!-- end::Table -->
+            </div>
+            <!-- end::Table container -->
+          </div>
+          <!-- begin::Body -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+        </div>
+  
+        <div class="mb-5">
+          <button type="button" class="btn btn-primary ms-12" [disabled]="isLoading" (click)="saveSettings()">
+            <ng-container *ngIf="!isLoading"><i class="bi bi-box-arrow-down fs-3"></i>Save</ng-container>
+            <ng-container *ngIf="isLoading">
+              <span clas="indicator-progress" [style.display]="'block'">
+                Please wait...{{ " " }}
+                <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+              </span>
+            </ng-container>
+          </button>
+  
+  
+  
+          <button type="button" class="btn btn-danger ms-1" [disabled]="isLoading" (click)="saveSettings()">
+            <ng-container *ngIf="!isLoading"><i class="bi bi-x-lg fs-3"></i>CLose</ng-container>
+            <ng-container *ngIf="isLoading">
+              <span clas="indicator-progress" [style.display]="'block'">
+                Please wait...{{ " " }}
+                <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+              </span>
+            </ng-container>
+          </button>
+  
+  
+          <button type="button" class="btn btn-dark ms-1" [disabled]="isLoading" (click)="saveSettings()">
+            <ng-container *ngIf="!isLoading"><i class="bi bi-file-earmark-arrow-down fs-3"></i>Import</ng-container>
+            <ng-container *ngIf="isLoading">
+              <span clas="indicator-progress" [style.display]="'block'">
+                Please wait...{{ " " }}
+                <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+              </span>
+            </ng-container>
+          </button>
+        </div>
+        
+  
+  
+  
+  
+      </form>
+    </div>
+  
+  
+  
+  </div>
+  
